@@ -38,7 +38,7 @@ export const data = {
     },
     {
       label: "Avg score",
-      data: [90, 80, 70, 70, 96, 88],
+      data: [90, 80, 70, 80, 96, 88],
       fill: true,
       backgroundColor: "rgba(54, 162, 235, 0.2)",
       borderColor: "rgb(54, 162, 235)",
