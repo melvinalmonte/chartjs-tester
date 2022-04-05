@@ -21,12 +21,12 @@ ChartJS.register(
 
 export const data = {
   labels: [
-    "Pillar 1",
-    "Pillar 2",
-    "Pillar 3",
-    "Pillar 4",
-    "Pillar 5",
-    "Pillar 6",
+    "Category 1",
+    "Category 2",
+    "Category 3",
+    "Category 4",
+    "Category 5",
+    "Category 6",
   ],
   datasets: [
     {
