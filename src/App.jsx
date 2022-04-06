@@ -1,4 +1,14 @@
 import {
+  AspectRatio,
+  Button,
+  Drawer,
+  DrawerBody,
+  DrawerContent,
+  DrawerHeader,
+  DrawerOverlay,
+  useDisclosure,
+} from "@chakra-ui/react";
+import {
   Chart as ChartJS,
   RadialLinearScale,
   PointElement,
@@ -50,13 +60,30 @@ export const data = {
   ],
 };
 function App() {
+  const { isOpen, onOpen, onClose } = useDisclosure();
+
   return (
     <div className="App">
       <header className="App-header">
         <div className="radar-container">
           <Radar data={data} />
+          <Button variant={"solid"} colorScheme="facebook" onClick={onOpen}>
+            Open Drawer
+          </Button>
         </div>
       </header>
+      <Drawer isOpen={isOpen} onClose={onClose} size="xs">
+        <DrawerOverlay />
+        <DrawerContent>
+          <DrawerHeader>Some header</DrawerHeader>
+          <DrawerBody>
+            <AspectRatio maxW='560px' ratio={1}>
+              <iframe src="https://docs.microsoft.com/video/media/62497e92-b3f6-491d-bdad-7881afd041a9/architectsuccessworkloads_high.mp4" title='azure-well-architectured' allowFullScreen/>
+
+            </AspectRatio>
+          </DrawerBody>
+        </DrawerContent>
+      </Drawer>
     </div>
   );
 }
